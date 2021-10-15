@@ -1,0 +1,349 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{tabularx}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Application of different portfolio optimization methodologies under sudden market movements: Sri Lankan context\\
+}
+\author{\IEEEauthorblockN{G.P.M. de Silva}
+\IEEEauthorblockA{\textit{Department of Decision Sciences} \\
+\textit{Faculty of Business, University of Moratuwa}\\
+Moratuwa, Sri Lanka \\
+pasan.17@business.mrt.ac.lk}
+
+\and
+\IEEEauthorblockN{M.G.H. Lakmal}
+\IEEEauthorblockA{\textit{Department of Decision Sciences} \\
+\textit{Faculty of Business, University of Moratuwa}\\
+Moratuwa, Sri Lanka \\
+harshana.17@business.mrt.ac.lk}
+
+\and
+\IEEEauthorblockN{S.I.U. Ruwandika}
+\IEEEauthorblockA{\textit{Department of Decision Sciences} \\
+\textit{Faculty of Business, University of Moratuwa}\\
+Moratuwa, Sri Lanka \\
+ishara.17@business.mrt.ac.lk}
+
+\and
+\IEEEauthorblockN{S.D. Perera}
+\IEEEauthorblockA{\textit{Department of Decision Sciences} \\
+\textit{Faculty of Business, University of Moratuwa}\\
+Moratuwa, Sri Lanka \\
+sulaniep@uom.lk}
+}
+
+\maketitle
+
+\begin{abstract}
+
+Since its origin in 1952, the Modern portfolio theory by Harry Markowitz has been renowned and widely used by market practitioners. The Black-Litterman model of portfolio optimization has been introduced as an alternative method of portfolio optimization, and also is widely used since 1991. This paper tries to examine which portfolio optimization methodology of the above is ideal under sudden market movements in Sri Lankan context. The study is conducted using 15 stocks across 9 industries traded in the Colombo Stock Exchange, in the period of 2010-2019, to test for the year 2020. The study recognized that under sudden market movements, the Black-Litterman model proved to be optimal than the Markowitz model in Sri Lankan context.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Markowitz, Black-Litterman, Optimization, Portfolio(s)
+\end{IEEEkeywords}
+
+\section{Introduction}
+Portfolio optimization is the process of selecting the best portfolio, out of the set of all portfolios being considered, according to some objective. The objective typically maximizes factors such as expected return and minimizes costs such as financial risks [1]. The groundwork of Modern portfolio theory was developed by Harry Markowitz [1]. Markowitz used the theory of probability and quantified the expected risk and return of financial assets together as a risk-return trade-off [1]. Although the Markowitz theory laid the foundation for portfolio optimization, it has not been practically utilized by investment managers and experts for a long time due to its pitfalls. For instance, the model’s high sensitivity to alterations of inputs and outputs. Investment managers have always used an augmented version of the Markowitz model which suited their situation [2].
+
+Due to the Markowitz model’s non-intuitiveness in practical scenarios, Fischer Black and Robert Litterman of Goldman Sachs developed a new method of portfolio allocation, which was aimed to deal with the pitfalls of the Markowitz mean-variance (MV) model [2]. The starting point of MV was considered to be the “Null Portfolio”, that the portfolio optimization of MV starts with null arrays of weights. Then the  equilibrium portfolio under the MV model, which means the portfolio with equal weights, is identified as the initial point of the Black-Litterman (B-L) model. The potential investor(s) was then to assign views i.e., their opinions on how one or many assets would outperform the others. These distinct views were combined numerically, and calculated in developing the B-L Model [2].
+
+Previous studies have applied the traditional MV model and B-L model to the South Asian markets and analyzed the differences between them. These markets have similar market functionalities as Sri Lanka [4,5]. These recognize that although the Markowitz model is popular among scholars, it has been rarely implemented by practitioners due to its flaws. In particular, when Markowitz optimizer runs without constraints, it often suggests taking a negative position (shorting) in different assets and results in extreme weights [3]. This is because it over-weighs the assets with a negative correlation or high expected returns and under-weighs the assets that have a positive correlation and low expected returns [2]. The Markowitz model also does not incorporate investors’ confidence views. These pitfalls of the MV model are addressed by Black and Litterman when they improved the MV model with the incorporation of investors' views with the implied equilibrium return, which leads to a more diversified portfolio [2]. 
+
+However, there is a significant and vivid lack of studies conducted on these aspects in asset management and portfolio optimization in Sri Lanka and its market functionalities. Hence, the study aims to recognize the level of application of these portfolio optimization mechanisms in Sri Lanka, where the ideal technique under highly volatile market circumstances is to be recognized. 
+
+This paper would first address the theoretical background of the key arguments of both the Markowitz and Black-Litterman models, which will be followed by the application of both mechanisms into the Sri Lankan context. For this, we would first generate a set of portfolios using MV and B-L mechanisms. Then a comparison of the two models will be done in the Sri Lankan context. Finally, the mechanism of portfolio optimization, which provides the most optimum results for Sri Lanka, under sudden  movements of the market will be identified. The study is the first to analyze and compare distinct portfolio optimization methods in Sri Lankan context and the impact of sudden market movements on these methods. Thus, the investors can actively use the findings of the study in their real-life investment activities. 
+
+\section{Methodology}
+Historical data from 15 companies that are traded in Colombo Stock Exchange (CSE) was used for the analysis and is given in Table I.
+
+\begin{table}[htbp]
+\caption{Stocks and their Industries}\label{tab1}
+\resizebox{\columnwidth}{!}{\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Industry} & \textbf{Stock}&\textbf{Stock Ticker}\\
+\hline
+\multirow{Holdings/Conglomerates} & John Keells Holdings PLC & JKH.N0000 \\ 
+& Expolanka Holdings PLC & EXPO.N000 \\ 
+& Hemas Holdings PLC & HHL.N000 \\ 
+\hline
+\multirow{Tobacco and Alcohol} & Ceylon Tobacco Company PLC & CTC.N000 \\ 
+\hline
+\multirow{Telecommunication} & Dialog Axiata PLC & DIAL.N000 \\ 
+& Sri Lanka Telecom PLC & SLTL.N000 \\ 
+\hline
+\multirow{Plantation} & Watawala Plantations PLC & WATA.N000 \\ 
+\hline
+\multirow{Construction} & Colombo Dockyard PLC & DOCK.N000 \\ 
+& Tokyo Cement PLC & TKYO.N000 \\ 
+\hline
+\multirow{Food and Beverages} & Lion Brewery (Ceylon) PLC & LION.N000 \\ 
+& Nestle Lanka PLC & NEST.N000 \\ 
+\hline
+\multirow{Tourism} & Aitken Spence Holdings PLC & SPEN.N000 \\ 
+\hline
+\multirow{Banking and Finance} & Hatton National Bank PLC & HNB.N0000 \\ 
+& Commercial Bank of Ceylon PLC & COMB.N000 \\ 
+\hline
+\multirow{Healthcare} & Lanka Hospitals Corporation PLC & LHCL.N000 \\ 
+\hline
+\end{tabular}}
+\end{table}
+
+Companies were selected representing 9 different industries to portray results in a broader aspect that includes a majority of industries and fields of the economy. The focus of the study is to analyze and compare the effectiveness of the MV and the B-L models under unexpected market fluctuations in Sri Lankan context. Hence, the models were tested for the period from 1\textsuperscript{st} of January 2020 to 31\textsuperscript{st} December 2020, the period where the Sri Lankan economy was directly influenced by the COVID-19 economic repercussions. Even though the considered testing period is one year from the start of 2020 to the end, that year can be divided into two time frames based on the behaviors of the market. To compare portfolio optimization models in both bullish and bearish market conditions, the testing period was divided into two, the first part from 01\textsuperscript{st} January 2020 to 30\textsuperscript{th} June 2020 and the second part from 01\textsuperscript{st} July 2020 to 31\textsuperscript{st} December 2020. The training period was considered to be 1\textsuperscript{st} January 2010 to 31\textsuperscript{st} December 2019, as including data before 2010 tended to have outliers due to the impact of the 30-year civil war in the Sri Lankan economy.
+
+\subsection{The Markowitz model} 
+
+As the initial step of modeling the Markowitz portfolio allocation, the expected returns and the volatility of the portfolios were calculated using equally assigned weights for the 15 stocks. Sharpe ratio of the equally weighted portfolio was calculated using equation (1). 
+
+\begin{equation}
+{S_p = \frac{E(R_p) - R_f}{\sigma^2}}
+\end{equation}
+
+\begin{itemize}
+   \item $S_p$ – Sharpe ratio of the equally weighted portfolio
+    \item $E(R_p)$ – Expected return of the equally weighted portfolio
+    \item $R_f$ – Risk free rate 
+    \item $\sigma^2$ – Portfolio variance 
+\end{itemize}
+
+The weighted average yield of a 5-year government treasury bond was selected as the risk-free rate in calculating the Sharpe ratio, assuming that the investors are engaged with the stock exchange for a long period.
+
+As the second step of building the Markowitz portfolio optimization model, portfolio expected returns and portfolio variances for 20,000 different portfolios were calculated by randomly allocating weights to the assets. From these portfolios, three portfolios were selected, namely the Global Minimum Variance (GMV) portfolio which gives the portfolio with minimum variance or risk, the Maximum Returns Portfolio (MRP) which gives the portfolio with maximum return, and the Optimal Return Portfolio (ORP) which gives the portfolio with maximum Sharpe ratio, the portfolio which provides the maximum return for an additional unit of risk. Among the three selected portfolios, the weights of the optimal portfolio were selected as the optimal weights in the Markowitz model, which is presented by equation (2).
+
+\begin{equation}
+{W^TR - \frac{\delta}{2}.W^T\Sigma W \rightarrow max_w}
+\end{equation} 
+
+\begin{itemize}
+\item R - Vector of returns
+\item $\Sigma$ - Covariance matrix
+\item $\delta$ - Risk aversion coefficient
+\item W - Vector of weights
+\end{itemize} \vspace{0.1cm}
+
+\subsection{The Black-Litterman model}
+
+The B-L model was built using the 4 steps presented below [6]. 
+
+\subsubsection{Step 01: Prior Distribution}
+The initial distribution of the model, the prior distribution is a N x 1 vector. It consists of expected returns generated according to the market weights of the selected assets. The prior distribution (N($\Pi$, $\tau$$\Sigma$)) which has a mean of implied equilibrium returns ($\Pi$) and a variance of scalar multiple of the covariance matrix of excess returns ($\tau$$\Sigma$) is given by equation (3).
+
+\begin{equation}
+{\Pi = \delta\Sigma W_m_r_t}
+\end{equation} 
+
+\begin{itemize}
+\item $\Pi$ - Implied Excess Equilibrium Return Vector 
+\item $\delta$ - Risk aversion coefficient
+\item $\Sigma$ - Covariance matrix of excess returns 
+\item $W_m_r_t$ – Market capitalization weight of the assets
+\end{itemize} \vspace{0.1cm}
+
+The risk aversion coefficient characterizes the expected risk-return tradeoff. It is the rate at which an investor will forego expected return for less variance [6]. The covariance matrix of assets was used to calculate the standard deviation of a portfolio of stocks which in turn is used by portfolio managers to quantify the risk associated with a particular portfolio [7].\vspace{0.1cm}
+
+Since the assets selected for the analysis are diversified, to calculate $\delta$, expected returns and market return volatilities were calculated using historical returns of All Share Price Index (ASPI) of the CSE, since the selected stocks represent the entire index.\vspace{0.1cm}
+
+\subsubsection{Step 02: View Distribution}
+Here, the Black-Litterman model introduces the view distribution of the investors.  The views were numerically calculated and stored as a vector Q, combining it with the respective risk of those views ($\epsilon$), and the matrix P represents a particular asset that bears a particular view belonging to Q. Thus, it only contains ones and zeros [8]. The calculation of the incorporated final view is given by equation (4). In this study, it assumed that it contains only the absolute views.
+
+\begin{equation}
+P  = 
+\begin{bmatrix}
+P_1_,_1 & \ldots & P_1_,_n\\
+\vdots & \ddots & \vdots\\
+P_n_,_1 & \ldots & P_n_,_n
+\end{bmatrix}
+Q = 
+\begin{bmatrix}
+q_1\\
+\vdots\\
+q_n
+\end{bmatrix}
++
+\begin{bmatrix}
+\epsilon_1\\
+\vdots\\
+\epsilon_n
+\end{bmatrix}
+\end{equation} 
+
+Standard deviation or the uncertainty of the views ($\Omega$) is calculated using the formula given by equation (5) where $\tau$ and $\Sigma$ represent a scalar and the covariance matrix of the portfolio respectively. 
+
+\begin{equation}
+\Omega = diag(P(\tau\Sigma)P^I){}
+\Omega = 
+\begin{bmatrix}
+\omega _1_,_1 & \ldots & \omega _1_,_n\\
+\vdots & \ddots & \vdots\\
+\omega _n_,_1 & \ldots & \omega _n_,_n
+\end{bmatrix}
+\end{equation} 
+
+\subsubsection{Step 03: Posterior Distribution}
+Combining the prior distribution and view distribution gives the Black-Litterman main function distribution. Calculation of the expected value and standard deviation of the Black-Litterman main function distribution is given by equations (6) and (7) respectively.
+
+\begin{equation}
+\overline{\mu} = [(\tau\Sigma)^-^1 + P^{'}\Omega^-^1^P]^-^1[(\tau\Sigma)^-^1\Pi + P{'}\Omega^-^1Q]
+\end{equation} 
+
+\begin{equation}
+M^-^1 = [(\tau\Sigma)^-^1 + P{'}\Omega^-^1P]^-^1
+\end{equation} 
+
+\subsubsection{Calculating the B-L model weights}
+The B-L model weights were calculated using the reverse optimization process, given by equation (8). In the reverse optimization process, expected returns calculated by equation (6) and the volatility calculated by equation (7) were used to generate the B-L model weights.
+
+\begin{equation}
+w^* = (\delta\overline{\Sigma})^-^1 \overline{\mu}
+\end{equation} 
+
+The posterior covariance matrix of the B-L model ($\overline{\Sigma}$) was calculated using equation (9).
+
+\begin{equation}
+\overline{\Sigma} = \Sigma + [(\tau\Sigma)^-^1 + P^{'}\Omega^-^1P]^-^1
+\end{equation} 
+
+\section{Empirical Results and Discussion}
+As an initial procedure, the study first identifies the correlation between the stocks before the analysis. The correlation results revealed that none of the stocks strongly correlated with each other. These preliminary results provided sufficient evidence that the stocks selected for the study were fairly diversified, as there is no strong relationship among the industries. Based on this evidence, rather than the individual behavior of the stocks, the portfolio behavior was considered.
+
+While taking the closing prices of the stocks for the period 1\textsuperscript{st} January 2010 to 31\textsuperscript{st} December 2019, the Efficient portfolio frontier was derived in Fig. 1. This gives the set of optimal portfolios that offer the highest expected return for a defined level of risk or the lowest risk for a given level of expected return [3]. Portfolios that lie below the efficient frontier, indicated by the red dash lines in Fig. 1 are sub-optimal because they do not provide enough return for the level of risk [1].
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=7cm, height=5cm]{Figure 03.png}}
+\caption{Efficient Portfolio Frontier of 15 Stocks}
+\label{fig}
+\end{figure}
+
+\subsection{Markowitz portfolio allocation}
+The equal weights assigned to the stocks (Equal Weighted Portfolio - EWP) were considered as the starting point under the MV method. The equal-weight portfolio of a sector gives an idea about the overall profitability and risk associated with each sector over the training period [1,2]. However, for future investments, their usefulness is very limited [2].
+
+Next, the  three portfolios recognized in the methodology under the MV model were created. Using the efficient frontier in Fig.1, GMV, MRP, and ORP points were identified. 
+
+Out of these three portfolios, a risk-averse investor would prefer more of either the GMV portfolio or the ORP portfolio, while a risk-seeking investor would prefer the MRP portfolio [1,3]. A comparison between the returns and volatility among the GMV, MRP, ORP, and EWP in the training period of 2010-2019 is presented in Table II.
+
+\begin{table}[htbp]
+\caption{MV Model - Comparison of portfolios in the Training period}\label{tab1}
+\resizebox{\columnwidth}{!}{\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{} &\textbf{Portfolio Expected Return} & \textbf{Portfolio Volatility (Risk)} &\textbf{Sharpe Ratio}\\
+\hline
+\textbf{GMV} & \text{0.042800} & \text{0.037149} & \text{-2.42\% }\\
+\textbf{MRP} & \text{0.123667} & \text{0.171120} & \text{4.74\% }\\
+\textbf{ORP} & \text{0.116217} & \text{0.114322} & \text{7.17\% }\\
+\textbf{EWP} & \text{0.049497} & \text{9.150807e-05} & \text{-3.03\% }\\
+\hline
+\end{tabular}}
+\end{table}
+
+As per the results, it can be vividly observed that the GMV has a low return with a low risk, where the EWP displays a low return and very low volatility when compared with the other portfolios. The MRP has the highest return out of the four portfolios and also has the highest risk. Compared with the other portfolios, the ORP can be identified with a fair amount of return and risk. These results are justified by the Sharpe ratios of each portfolio where ORP displays the highest Sharpe ratio and MRP displays the next highest Sharpe ratio. Both GMV and EWP display negative Sharpe ratios. Therefore, in the four portfolios under the Markowitz portfolio allocation, ORP can be identified as the quintessential portfolio for the training period. 
+
+However, the above results with GMV, MRP, ORP, and EWP clearly show one main flaw of the Markowitz portfolio allocation. Based on the expected returns and the volatilities, the MV model suggests extreme behavior to investors. For instance, a risk-averse investor might be tempted to highly invest in a single asset based on the findings of EWP. This is identified to be non-optimal in asset allocation [5]. Drastic changes in returns and volatilities can occur with the MV portfolios based on the investor decisions, which are caused due to simple changes in the asset weights. Also, since the efficient frontier curve is shallow, which provides sufficient evidence that on average, an investor of these 15 stocks needs to take a significant amount of risk, to have more return. 
+
+\subsection{Black Litterman portfolio allocation}
+
+For the first step of the B-L procedure, the 15 stocks have been re-indexed based on their proportion of the total market capitalization. The B-L procedure was applied to the historical returns of the stocks, that were previously captured by the Markowitz portfolio allocation. First, the prior implied returns were calculated and then the constructed numerical values for the absolute views of the 15 stocks were applied. These views present the opinion of authors on how the assets would perform in the future. Using the training data and the Auto-Regressive Integrated Moving Average (ARIMA) model, the stock prices for the year 2020 were predicted to construct the absolute views for the testing period (assuming the investor was making portfolio decisions at the end of the year 2019). The status of the stocks, the status of their respective industries, and the country's economic situation at the end of 2019 along with the potential future effects of COVID-19 to the market were taken into consideration to determine the sign of the absolute views of the stock for the year 2020. (Whether the movements of the stocks in the testing period are positive or negative). The positive values would indicate a rise in the prices, while negative values indicate a decrease. The views generated for the stocks are presented in Table III.
+
+\begin{table}[htbp]
+\caption{Stocks and the incorporated Views}\label{tab1}
+\resizebox{\columnwidth}{!}{\begin{tabular}{|l|l|l|}
+\hline
+\multirow{JKH :- 0.03404} & SLTL :- -0.025 & NEST :- -0.065 \\ 
+{EXPO :- -0.09062} & WATA :- -0.085 & SPEN :- -0.23\\ 
+{HHL :- 0.025} & DOCK :- -0.02 & HNB :- 0.09\\ 
+{CTC :- 0.164} & TKYO :- -0.0825 & COMB :- 0.085 \\ 
+{DIAL :- 0.118} & LION :- 0.068  & LHCL :- -0.089\\ 
+\hline
+\end{tabular}}
+\end{table}
+
+After incorporating the views, the posterior distribution was calculated. Using the mean of the posterior distribution, the expected returns were calculated and using the standard deviation, the volatility of the posterior distribution was evaluated. In the posterior distribution, it was observed that after the incorporation of the views, the posterior returns of all the stocks had taken the direction proposed by the views. Thus, significant differences were seen between the posterior returns and the historical returns. It was observed that stronger the confidence ($\Omega$$^-^1$) of the view, the difference between the historical returns and posterior returns increased. Next, the B-L posterior weights were determined. 
+
+\subsection{Portfolio optimization under sudden market movements}
+
+The above results of the training period of both MV and B-L models were then applied to the testing period to recognize which portfolio optimization method optimally behaved under sudden market fluctuations. Here, the asset weights under the GMV, MRP, ORP, EWP, and the posterior weights of B-L were applied to the testing period. The testing period was categorized into three sections; 
+
+\begin{itemize}
+\item First 6 months behavior (1\textsuperscript{st}  January 2020 - 30 \textsuperscript{th} June 2020) 
+\item Second 6 months behavior (1\textsuperscript{st} July 2020 - 31\textsuperscript{st} December 2020) 
+\item Complete testing period behavior (1\textsuperscript{st} January 2020 - 31\textsuperscript{st} December 2020).
+\end{itemize}
+
+The reason to divide the testing period into two subsections was that to recognize whether there are any significant fluctuations of stock performance between the two sub-periods. Table IV presents the performances of all the different portfolios; the EWP, GMV, MRP, ORP, and the B-L for the whole testing period. The Sharpe ratio was used as the investment metric in the study, to conclude which portfolio optimization mechanism is more optimal.
+
+\begin{table}[H]
+\caption{Comparison of different portfolios under MV and B-L for the testing period}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{} & \textbf{Expected Return} & \textbf{Volatility (Risk)} & \textbf{Sharpe Ratio} \\
+\hline
+\text{EWP} & \text{0.00494} & \text{0.1518} & \text{-41.252\%}\\
+\text{GMV} & \text{0.02497} & \text{0.003846} & \text{-21.062\%}\\
+\text{MRP} & \text{0.19424} & \text{0.24846} & \text{-24.331\%}\\
+\text{ORP} & \text{0.123667} & \text{0.171120} & \text{-26.241\%}\\
+\text{B-L} & \text{0.22234} & \text{0.003004} & \text{-14.1243\%}\\
+\hline
+\end{tabular}
+\label{tab1}
+\end{center}
+\end{table} 
+
+All the constructed portfolios have negative Sharpe ratios, which suggests that the performance of the portfolios was below the risk-free rate, hence deducing that during the testing period none of the portfolios seemed to be performing well. However, that was expected as the testing period was associated with significant market fluctuations as responding to the COVID-19 outbreak, and the lockdown of the country which had severely interrupted market procedures. The B-L model provided a much higher expected return by accepting a bit more risk, compared to other models. Therefore in comparison, under the effects of sudden market fluctuations, the B-L model incorporated with absolute views has turned out to be the best-suited portfolio mechanism, which is associated with the highest Sharpe Ratio. This further justifies the incorporation of absolute views into the model. Here also the sensitivity of the MV model, compared to the B-L has been highlighted, as small changes in the historical returns can give very different portfolio compositions for EWP, GMV, MRP, and ORP portfolios.
+
+A comparison of the Markowitz and B-L models for the testing period is displayed in Table V using their respective Sharpe ratios. Here, the GMV was selected to compare with the B-L model as it had the highest Sharpe ratio compared to the EWP, MRP, and ORP in the testing period.
+
+\begin{table}[H]
+\caption{Comparison of Sharpe ratio (SR)  : Two sub-testing periods}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{} & \textbf{MV Model} & \textbf{B-L Model}\\
+\hline
+\text{SR - 1\textsuperscript{st} 6 months} & \text{-43.62\%} & \text{-36.74\%}\\
+\text{SR - 2\textsuperscript{nd} 6 months} & \text{21.67\%} & \text{44.24\%} \\
+\hline
+\end{tabular}
+\label{tab1}
+\end{center}
+\end{table}
+
+These results further prove that the sudden impact on the market during the first 06 months of the testing period and the recovery of the economy in the next 06 months. (It should be noted that the second wave of COVID-19 occurred during the second 6 months of the testing period, but was not restrictive as much to the economy as the first wave, and the market had been adjusted to its repercussions at this point). As identified earlier, for a weak form efficient country like Sri Lanka, which responds to sudden market fluctuations with adapted information, the B-L model has proved to be more efficient, compared with the MV model. At the same time, the difference of Sharpe ratios in both GMV and the B-L in the first and second sub-periods of the testing period can be justified by the fact that short selling is not allowed in Sri Lanka. Thus, the sudden market movements are not immediately reciprocated in the economy.
+
+\section{Conclusion}
+In this paper, we have investigated which portfolio allocation method works best under sudden market movements in Sri Lanka. The two allocation methods considered were the Markowitz (MV) method and the Black-Litterman (B-L) method. Under the Markowitz method, four portfolios namely EWP, GMV, MRP, and ORP were generated. With the Bayesian approach, the B-L model incorporated authors’ views into the model. The results showed that the B-L model generates a more diversified portfolio by maintaining a greater level of expected return compensating for a lower level of risk compared to the MV portfolios. Although both the portfolios under MV and B-L methods showed negative Sharpe ratios, the B-L model had the highest Sharpe ratio, which shows that the B-L model is outperforming the MV model under sudden movements in the Sri Lankan market. That being said, neither the MV model nor the B-L model was optimal in the first sub-period of the testing period as seen by the negative Sharpe ratios (caused by the drastic impact of COVID-19), while the B-L model outperformed the MV model in the second sub-period of the testing period. The results further proved that the sudden market movements are not immediately reciprocated in Sri Lanka. Thus, it can be concluded that when the Sri Lankan economy started to adjust to the sudden market movements caused by COVID-19, the B-L model was more optimal compared to the MV Model.
+
+The scope of the study is limited with the incorporated views, as they are mostly subjective and are not thoroughly based on equity market research. For further studies, we recommend incorporating relative views and behavioral aspects of the investors with the B-L model. Also, it can be further expanded using unsupervised learning techniques such as eigen portfolios, along with deep reinforcement learning for portfolio optimization.
+
+\section*{Acknowledgment}
+
+Our heartfelt gratitude goes to the University of Bahrain for organizing the conference, accepting the paper, and providing the necessary guidance in successfully publishing our paper. 
+
+\begin{thebibliography}{00}
+\bibitem{b1} P. N. Kolm, R. Tütüncü, and F. J. Fabozzi, ``60 Years of Portfolio Optimization: Practical Challenges and Current Trends.,'' European Journal of Operational Research, vol. 234, pp. 356--371, 2014.
+\bibitem{b2} C. Mankert, and M.K Seiler, ``Mathematical Derivations and Practical Implications for the Use of the Black–Litterman Model'', The Journal of Real Estate Portfolio Management, vol. 17, pp.139--159, 2011
+\bibitem{b3} H. Markowitz, ``Portfolio Selection.,'' The Journal of Finance, vol. 7, pp. 77--91, 1952.
+\bibitem{b4} A.K Mishra, S. Pisipati, and I.Vyas, ``An equilibrium approach for tactical asset allocation: Assessing Black-Litterman model to Indian stock market.,'' Journal of Economics and International Finance, vol. 33, pp.553--563, September, 2011
+\bibitem{b5} L. Martellini, and V. Ziemann, ``Extending Black-Litterman Analysis Beyond the Mean-Variance Framework.,'' The Journal of Portfolio Management'', vol. 3, pp. 33--34, 2007.
+\bibitem{b6} T.M Idzorek, ``A step-by-step guide to the Black-Litterman model: Incorporating user-specified confidence levels.,''2004
+\bibitem{b7} G. He, and R. Litterman, ``The intuition behind Black–Litterman model portfolios.,'' Investment Management Research'', Goldman, Sachs and Company, December 1999.
+\bibitem{b8}F. Black, and R. Litterman, ``Global Portfolio Optimisation.,'' Financial
+Analysts Journal'', vol. 48, pp. 28--43, 1992.
+
+\end{thebibliography}
+
+\end{document}
